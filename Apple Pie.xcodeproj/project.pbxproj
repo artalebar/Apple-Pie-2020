@@ -13,6 +13,7 @@
 		876B442C255728030069AD9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 876B442A255728030069AD9F /* Main.storyboard */; };
 		876B442E255728060069AD9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 876B442D255728060069AD9F /* Assets.xcassets */; };
 		876B4431255728060069AD9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 876B442F255728060069AD9F /* LaunchScreen.storyboard */; };
+		876B443A25588EDF0069AD9F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876B443925588EDF0069AD9F /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		876B442D255728060069AD9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		876B4430255728060069AD9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		876B4432255728060069AD9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		876B443925588EDF0069AD9F /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				876B4424255728030069AD9F /* AppDelegate.swift */,
+				876B442D255728060069AD9F /* Assets.xcassets */,
+				876B443925588EDF0069AD9F /* Game.swift */,
+				876B4432255728060069AD9F /* Info.plist */,
+				876B442F255728060069AD9F /* LaunchScreen.storyboard */,
+				876B442A255728030069AD9F /* Main.storyboard */,
 				876B4426255728030069AD9F /* SceneDelegate.swift */,
 				876B4428255728030069AD9F /* ViewController.swift */,
-				876B442A255728030069AD9F /* Main.storyboard */,
-				876B442D255728060069AD9F /* Assets.xcassets */,
-				876B442F255728060069AD9F /* LaunchScreen.storyboard */,
-				876B4432255728060069AD9F /* Info.plist */,
 			);
 			path = "Apple Pie";
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				876B4429255728030069AD9F /* ViewController.swift in Sources */,
 				876B4425255728030069AD9F /* AppDelegate.swift in Sources */,
 				876B4427255728030069AD9F /* SceneDelegate.swift in Sources */,
+				876B443A25588EDF0069AD9F /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
