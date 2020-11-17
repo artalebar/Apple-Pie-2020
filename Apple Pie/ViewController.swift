@@ -14,11 +14,13 @@ class ViewController: UIViewController {
     @IBOutlet var letterButtons: [UIButton]!
     @IBOutlet weak var correctWordLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var genderChange: UISegmentedControl!
+        
     
     // MARK: - Properties
     var currentGame: Game!
     let incorrectMovesAllowed = 7
-    var listOfWords = [
+    let listOfMenNames = [
         "Адель",
         "Айдар",
         "Александр",
@@ -118,23 +120,128 @@ class ViewController: UIViewController {
         "Юрий",
         "Ян",
         "Яромир",
-        "Ярослав",
+        "Ярослав"
     ].shuffled()
+    let listOfWomenNames = [
+        "Агата",
+        "Аделина",
+        "Александра",
+        "Алёна",
+        "Алина",
+        "Алиса",
+        "Алия",
+        "Алла",
+        "Альбина",
+        "Амалия",
+        "Амелия",
+        "Амина",
+        "Анастасия",
+        "Ангелина",
+        "Анжелика",
+        "Анна",
+        "Антонина",
+        "Ариана",
+        "Арина",
+        "Валентина",
+        "Валерия",
+        "Варвара",
+        "Василина",
+        "Василиса",
+        "Вера",
+        "Вероника",
+        "Виктория",
+        "Виолетта",
+        "Виталина",
+        "Влада",
+        "Владислава",
+        "Галина",
+        "Дарина",
+        "Дарья",
+        "Диана",
+        "Ева",
+        "Евгения",
+        "Екатерина",
+        "Елена",
+        "Елизавета",
+        "Есения",
+        "Жанна",
+        "Зарина",
+        "Злата",
+        "Инна",
+        "Ирина",
+        "Камилла",
+        "Карина",
+        "Каролина",
+        "Кира",
+        "Кристина",
+        "Ксения",
+        "Лариса",
+        "Лиана",
+        "Лидия",
+        "Лилия",
+        "Любовь",
+        "Людмила",
+        "Мадина",
+        "Майя",
+        "Маргарита",
+        "Марина",
+        "Мария",
+        "Марьяна",
+        "Мелания",
+        "Милана",
+        "Милена",
+        "Мирослава",
+        "Надежда",
+        "Наталия",
+        "Наталья",
+        "Наташа",
+        "Нелли",
+        "Ника",
+        "Нина",
+        "Оксана",
+        "Олеся",
+        "Ольга",
+        "Полина",
+        "Регина",
+        "Самира",
+        "Светлана",
+        "Снежана",
+        "София",
+        "Софья",
+        "Стефания",
+        "Таисия",
+        "Тамара",
+        "Татьяна",
+        "Ульяна",
+        "Эвелина",
+        "Элина",
+        "Эльвира",
+        "Эльмира",
+        "Эмилия",
+        "Юлиана",
+        "Юлия",
+        "Яна",
+        "Ярослава",
+        "Ясмина",
+    ].shuffled()
+    var listOfWords = [" "]
     var totalLosses = 0 {
         didSet {
             newRound()
+            genderChange.isEnabled = true
         }
     }
     var totalWins = 0 {
         didSet {
             newRound()
+            genderChange.isEnabled = true
         }
     }
     
     // MARK: - Methods
     func enableButtons(_ enable: Bool = true) {
-        for buttton in letterButtons {
-            buttton.isEnabled = enable
+        for button in letterButtons {
+            button.isEnabled = enable
         }
     }
     
@@ -183,17 +290,25 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        listOfWords = listOfMenNames
         newRound()
     }
     
     // MARK: - IB Actions
+
     @IBAction func letterButtonPressed(_ sender: UIButton) {
         sender.isEnabled = false
+        genderChange.isEnabled = false
         let letter = sender.title(for: .normal)!
         currentGame.playerGuessed(letter: Character(letter))
         updateState()
     }
     
+   
+    @IBAction func changeGenderName(_ sender: UISegmentedControl) {
+        listOfWords = sender.selectedSegmentIndex < 1 ? listOfMenNames.shuffled() : listOfWomenNames.shuffled()
+        newRound()
+    }
     
 }
 
