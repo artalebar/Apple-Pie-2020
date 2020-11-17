@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var correctWordLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var genderChange: UISegmentedControl!
-        
+    @IBOutlet weak var nameForHelp: UILabel!
     
     // MARK: - Properties
     var currentGame: Game!
@@ -237,6 +237,7 @@ class ViewController: UIViewController {
             genderChange.isEnabled = true
         }
     }
+    var countOfRounds = 0
     
     // MARK: - Methods
     func enableButtons(_ enable: Bool = true) {
@@ -255,6 +256,8 @@ class ViewController: UIViewController {
         currentGame = Game(word: newWord, incorrectMovesRemaining: incorrectMovesAllowed)
         updateUI()
         enableButtons()
+        nameForHelp.text = "Угадай слово"
+        countOfRounds += 1
     }
     
     func updateCorrectWordLabel() {
@@ -285,7 +288,7 @@ class ViewController: UIViewController {
         let image = "Tree\(imageNumber)"
         treeImageView.image = UIImage(named: image)
         updateCorrectWordLabel()
-        scoreLabel.text = "Выигрыши: \(totalWins), проигрыши: \(totalLosses)"
+        scoreLabel.text = "Побед: \(totalWins)    Поражений: \(totalLosses)    Раундов: \(countOfRounds)"
     }
     
     override func viewDidLoad() {
@@ -295,7 +298,7 @@ class ViewController: UIViewController {
     }
     
     // MARK: - IB Actions
-
+    
     @IBAction func letterButtonPressed(_ sender: UIButton) {
         sender.isEnabled = false
         genderChange.isEnabled = false
@@ -304,11 +307,19 @@ class ViewController: UIViewController {
         updateState()
     }
     
-   
+    
     @IBAction func changeGenderName(_ sender: UISegmentedControl) {
         listOfWords = sender.selectedSegmentIndex < 1 ? listOfMenNames.shuffled() : listOfWomenNames.shuffled()
         newRound()
     }
     
+    @IBAction func resetRound() {
+        newRound()
+        genderChange.isEnabled = true
+    }
+    
+    @IBAction func showWord() {
+        nameForHelp.text = currentGame.word
+    }
 }
 
