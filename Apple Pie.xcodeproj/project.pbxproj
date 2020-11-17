@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8759E40F2561A82F00B6794C /* Screenshort02.png in Resources */ = {isa = PBXBuildFile; fileRef = 8759E40D2561A82F00B6794C /* Screenshort02.png */; };
-		8759E4102561A82F00B6794C /* Screenshort01.png in Resources */ = {isa = PBXBuildFile; fileRef = 8759E40E2561A82F00B6794C /* Screenshort01.png */; };
 		876B4425255728030069AD9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876B4424255728030069AD9F /* AppDelegate.swift */; };
 		876B4427255728030069AD9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876B4426255728030069AD9F /* SceneDelegate.swift */; };
 		876B4429255728030069AD9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876B4428255728030069AD9F /* ViewController.swift */; };
@@ -16,11 +14,11 @@
 		876B442E255728060069AD9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 876B442D255728060069AD9F /* Assets.xcassets */; };
 		876B4431255728060069AD9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 876B442F255728060069AD9F /* LaunchScreen.storyboard */; };
 		876B443A25588EDF0069AD9F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876B443925588EDF0069AD9F /* Game.swift */; };
+		87B9DC4A2564617F0023EE5D /* Screenshot01.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B9DC482564617F0023EE5D /* Screenshot01.png */; };
+		87B9DC4B2564617F0023EE5D /* Screenshot02.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B9DC492564617F0023EE5D /* Screenshot02.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8759E40D2561A82F00B6794C /* Screenshort02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshort02.png; sourceTree = "<group>"; };
-		8759E40E2561A82F00B6794C /* Screenshort01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshort01.png; sourceTree = "<group>"; };
 		876B4421255728030069AD9F /* Apple Pie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple Pie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		876B4424255728030069AD9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		876B4426255728030069AD9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +28,8 @@
 		876B4430255728060069AD9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		876B4432255728060069AD9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		876B443925588EDF0069AD9F /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		87B9DC482564617F0023EE5D /* Screenshot01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot01.png; sourceTree = "<group>"; };
+		87B9DC492564617F0023EE5D /* Screenshot02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot02.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,8 +46,8 @@
 		8759E40C2561A7ED00B6794C /* Screenshorts */ = {
 			isa = PBXGroup;
 			children = (
-				8759E40E2561A82F00B6794C /* Screenshort01.png */,
-				8759E40D2561A82F00B6794C /* Screenshort02.png */,
+				87B9DC482564617F0023EE5D /* Screenshot01.png */,
+				87B9DC492564617F0023EE5D /* Screenshot02.png */,
 			);
 			path = Screenshorts;
 			sourceTree = "<group>";
@@ -141,10 +141,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8759E4102561A82F00B6794C /* Screenshort01.png in Resources */,
 				876B4431255728060069AD9F /* LaunchScreen.storyboard in Resources */,
 				876B442E255728060069AD9F /* Assets.xcassets in Resources */,
-				8759E40F2561A82F00B6794C /* Screenshort02.png in Resources */,
+				87B9DC4A2564617F0023EE5D /* Screenshot01.png in Resources */,
+				87B9DC4B2564617F0023EE5D /* Screenshot02.png in Resources */,
 				876B442C255728030069AD9F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
